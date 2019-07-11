@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:merchants/MainProductsPages/0_SoleProprietorBottonNavigationPage.dart';
+import 'package:merchants/MerchantPages/MainProductsPages/0_SoleProprietorBottonNavigationPage.dart';
 
 class SendMoneyPaymentComplete extends StatefulWidget{
 

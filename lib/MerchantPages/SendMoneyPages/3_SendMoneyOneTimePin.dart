@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:merchants/SendMoneyPages/4_SendMoneyPaymentCompletePage.dart';
+import 'package:merchants/MerchantPages/SendMoneyPages/4_SendMoneyPaymentCompletePage.dart';
 
 class SendMoneyOneTimePin extends StatefulWidget{
 

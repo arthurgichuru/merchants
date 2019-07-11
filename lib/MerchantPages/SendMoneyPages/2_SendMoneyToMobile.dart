@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:merchants/SendMoneyPages/3_SendMoneyOneTimePin.dart';
-import 'package:merchants/MainProductsPages/0_SoleProprietorBottonNavigationPage.dart';
+import 'package:merchants/MerchantPages/SendMoneyPages/3_SendMoneyOneTimePin.dart';
+import 'package:merchants/MerchantPages/MainProductsPages/0_SoleProprietorBottonNavigationPage.dart';
 
 class SendMoneyToMobile extends StatefulWidget{
 
@@ -74,7 +74,7 @@ class _SendMoneyToMobile extends State<SendMoneyToMobile>{
                 padding: EdgeInsets.all(0.0),
                 child: Icon(Icons.monetization_on, color: Colors.blue,),
               ),
-              helperText: 'Charge UGX: 20.0',
+              helperText: 'Charge KES: 35.0',
               labelText: 'Amount',
             ),
           ),
@@ -101,6 +101,35 @@ class _SendMoneyToMobile extends State<SendMoneyToMobile>{
           ),
         ]
     );
+
+
+    //Next Button
+
+    final selectFromFavourites = new Container(
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Center(
+        child: IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                width: 250.0,
+                height: 40.0,
+                child: new FlatButton(
+                    child: const Text('SELECT FROM CONTACTS', style: TextStyle(color: Colors.blue),),
+                    //color: Colors.white,
+                    splashColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10.0),),
+                    onPressed: () {
+                      //Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> SendMoneyOneTimePin()));
+                    }),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
 
 
     //Next Button
@@ -149,7 +178,8 @@ class _SendMoneyToMobile extends State<SendMoneyToMobile>{
             IconButton(
               icon: Icon(Icons.cancel,),
               onPressed: (){
-                Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> SoleProprietorBottomNavPage()));
+                //Navigator.pop(context,false);
+              Navigator.of(context).push(new MaterialPageRoute(builder: (context)=> SoleProprietorBottomNavPage()));
               },
             )
           ],
@@ -164,6 +194,8 @@ class _SendMoneyToMobile extends State<SendMoneyToMobile>{
                   descriptionText,
                   SizedBox(height: 10,width: 300,),
                   SendMoneyPhoneNumber,
+                  SizedBox(height: 10,width: 300,),
+                  selectFromFavourites,
                   SizedBox(height: 30,width: 300,),
                   SendMoneyAmount,
                   SizedBox(height: 20,width: 300,),
